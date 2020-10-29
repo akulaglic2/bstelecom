@@ -1,0 +1,56 @@
+<div class="view"
+  style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+  <nav class=" navbar-expand-sm navbar-dark fixed-top scrolling-navbar">
+    <div class="container pt-3">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+        aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <a class="navbar-brand"
+          href="https://www.facebook.com/pages/category/Engineering-Service/BS-Telecom-Solutions-668071440320586/">
+          <strong>BSTelecom</strong>
+        </a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" (click)="home()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="about()">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="table()">AZRA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+
+  <div *ngIf="SHOWHOME || SHOWABOUT || SHOWTABLE">
+    <div class="d-flex justify-content-center">
+    </div>
+    <img src="../assets/slikaBST.jpg" width="100px" height="50px">
+  </div>
+
+  <div *ngIf=SHOWHOME>
+    <app-home>
+    </app-home>
+  </div>
+  <div *ngIf=SHOWABOUT>
+    <app-about></app-about>
+  </div>
+
+  <div *ngIf=SHOWTABLE>
+    <app-table></app-table>
+  </div>
+
+
+</div>
